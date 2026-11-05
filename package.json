@@ -1,0 +1,16 @@
+{
+  "name": "orange-ribbon-hunt",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/game.test.mjs",
+    "db:local": "wrangler d1 migrations apply orange-ribbon-hunt --local",
+    "db:remote": "wrangler d1 migrations apply orange-ribbon-hunt --remote",
+    "dev": "wrangler pages dev public",
+    "deploy": "wrangler pages deploy public --project-name orange-ribbon-hunt --branch main"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
